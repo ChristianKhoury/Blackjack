@@ -29,6 +29,9 @@ class Card:
     def __eq__(self, other):
         return (self._suit, self._name) == (other._suit, other._name)
     
+    def __str__(self):
+        return f"{self._name} of {self._suit}"
+    
 
 def create_deck():
     deck = []
@@ -49,4 +52,6 @@ def create_deck():
 
 
 def create_shuffled_deck():
-    return random.shuffle(create_deck())
+    deck = create_deck()
+    random.shuffle(deck)
+    return deck

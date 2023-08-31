@@ -7,8 +7,9 @@ class TestCards(unittest.TestCase):
         test = Cards.Card('diamond', '10')
         self.assertEqual(test.val(), 10)
 
-        test2 = Cards.Card('spades', 'J', 11)
+        test2 = Cards.Card('spades', 'jack', 11)
         self.assertEqual(test2.val(), 11)
+        self.assertEqual(str(test2), "jack of spades")
 
         test3 = Cards.Card('hearts', 'ace')
         self.assertEqual(test3.val(), (1, 11))
