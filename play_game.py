@@ -41,3 +41,8 @@ def play_round():
 
         # trigger lose event: Loses chips starts new round
         pass
+
+    elif user.value == 21:
+        # trigger win event: win chips
+        pass
+    

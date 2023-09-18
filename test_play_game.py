@@ -8,6 +8,7 @@ class TestGame(unittest.TestCase):
         deck = Cards.create_shuffled_deck()
         player = play_game.Hand(deck)
         self.assertIsInstance(player.value, int)
+        self.assertLessEqual(player.value, 21)
 
 if __name__ == '__main__':
     unittest.main()
